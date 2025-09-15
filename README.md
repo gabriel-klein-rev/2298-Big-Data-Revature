@@ -4,6 +4,10 @@ Welcome to the repository for training 2298 - Big Data. Here you will find notes
 
 ## Environment Setup
 
+### RevPro
+- Curriculum information as well as quizzes, coding challenges, and assignments will be located on your RevaturePro platform. You should be able to access it here with your Revature login:
+    - https://app.revature.com/login
+
 ### VS Code
 
 - VS Code is a code editor with some nice extensions that will be used in training. Download here:
