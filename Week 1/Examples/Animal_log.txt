@@ -1,0 +1,7 @@
+Name: Shadow, Type: cat, Age: 12, Color: Black
+Name: Fido, Type: dog, Age: 10, Color: Brown
+Name: Clifford, Type: dog, Age: 10, Color: Red
+Name: feline, Type: cat, Age: 4, Color: White
+Name: Canine, Type: dog, Age: 5, Color: Brown
+Name: cat, Type: cat, Age: 7, Color: orange
+Name: dog, Type: dog, Age: 30, Color: Brown
