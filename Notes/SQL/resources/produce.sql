@@ -1,0 +1,4 @@
+create schema fruits_and_veggies;
+use fruits_and_veggies;
+create table if not EXISTS produce ( id int auto_increment primary key, name varchar(20) not null unique, price decimal(3,2), type varchar(10) not null);
+insert into produce (name, price, type) values ('navel orange', 1.99, 'citrus'), ('mandarin orange', 0.75, 'citrus'), ('tangerine', 0.50, 'citrus'), ('red delicious', 2.00, 'apple'), ('jona gold', 2.50, 'apple'), ('granny smith', 1.00, 'apple'), ('blueberry', 0.40, 'berry'), ('raspberry', 0.35, 'berry'), ('kiwi', 0.75, 'berry'), ('watermelon', 3.99, 'melon'), ('cantaloupe', 2.99, 'melon'), ('honeydew', 2.00, 'melon'), ('lettuce', 2.99, 'leafy'), ('spinach', 1.99, 'leafy'), ('pumpkin', 4.99, 'marrow'), ('cucumber', 0.99, 'marrow'), ('potato', 0.45, 'root'), ('yam', 0.25, 'root'), ('sweet potato', 0.50, 'root'), ('onion', 0.33, 'allium'), ('garlic', 0.25, 'allium'), ('shallot', 0.60, 'allium');
