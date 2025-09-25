@@ -130,3 +130,34 @@ ORDER BY G.Grade DESC,
     CASE WHEN G.Grade < 8 THEN S.Marks END;
 
 ```
+### [Apples and Oranges](https://www.hackerrank.com/challenges/apple-and-orange/problem)
+```Python
+#
+# Complete the 'countApplesAndOranges' function below.
+#
+# The function accepts following parameters:
+#  1. INTEGER s - left edge of house
+#  2. INTEGER t - right edge of house
+#  3. INTEGER a - apple tree (left of house)
+#  4. INTEGER b - orange tree (right of house)
+#  5. INTEGER_ARRAY apples - apple distances
+#  6. INTEGER_ARRAY oranges - orange distances
+#
+
+def countApplesAndOranges(s, t, a, b, apples, oranges):
+    # Write your code here
+    apples_on_house = 0
+    oranges_on_house = 0;
+    
+    for d in apples:
+        if s <= a + d <= t:
+            apples_on_house += 1
+            
+    for d in oranges:
+        if s <= b + d <= t:
+            oranges_on_house += 1
+    
+    print(apples_on_house)
+    print(oranges_on_house)
+
+```
