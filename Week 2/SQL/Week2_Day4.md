@@ -161,3 +161,89 @@ def countApplesAndOranges(s, t, a, b, apples, oranges):
     print(oranges_on_house)
 
 ```
+### [Queens Attack II](https://www.hackerrank.com/challenges/weather-observation-station-2/problem)
+```python
+# Complete the 'queensAttack' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts following parameters:
+#  1. INTEGER n - size of square chessboard
+#  2. INTEGER k - num of obstacles
+#  3. INTEGER r_q - queens row
+#  4. INTEGER c_q - queens column
+#  5. 2D_INTEGER_ARRAY obstacles [k][{row, col}]
+#
+
+def queensAttack(n, k, r_q, c_q, obstacles):
+    # Write your code here
+    obstacle_set: set = set()
+    attacks = 0
+    
+    # Debugging, counting attacks in each direction to find problems:
+    nn = 0
+    ne = 0
+    e = 0
+    se = 0
+    s = 0
+    sw = 0
+    w = 0
+    nw = 0
+    
+    # O(n) operation to create a set, because set lookups are O(1)
+    for o in obstacles:
+        obstacle_set.add(tuple(o))
+        
+
+    # N - row++, col
+    for i in range(1, n):
+        if (r_q+i > n) or ((r_q+i, c_q) in obstacle_set):
+            break
+        attacks += 1
+        nn += 1
+    # NE - row++, col++
+    for i in range(1, n):
+        if (r_q+i > n) or (c_q+i > n) or ((r_q+i, c_q+i) in obstacle_set):
+            break
+        attacks += 1
+        ne += 1 
+    # E - row, col++
+    for i in range(1, n):
+        if (c_q+i > n) or ((r_q, c_q+i) in obstacle_set):
+            break
+        attacks += 1   
+        e += 1
+    # SE - row--, col++
+    for i in range(1, n):
+        if (r_q-i < 1) or (c_q+i > n) or ((r_q-i, c_q+i) in obstacle_set):
+            break
+        attacks += 1  
+        se += 1
+    # S - row--, col
+    for i in range(1, n):
+        if (r_q-i < 1) or ((r_q-i, c_q) in obstacle_set):
+            break
+        attacks += 1    
+        s += 1
+    # SW - row--, col--
+    for i in range(1, n):
+        if (r_q-i < 1) or (c_q-i < 1) or ((r_q-i, c_q-i) in obstacle_set):
+            break
+        attacks += 1   
+        sw += 1  
+    # W - row, col--
+    for i in range(1, n):
+        if (c_q-i < 1) or ((r_q, c_q-i) in obstacle_set):
+            break
+        attacks += 1 
+        w += 1 
+    # NW - row++, col--
+    for i in range(1, n):
+        if (r_q+i > n) or (c_q-i < 1) or ((r_q+i, c_q-i) in obstacle_set):
+            break
+        attacks += 1   
+        nw += 1 
+    # Debug, print attacks in each direction  
+    # print(nn, ne, e, se, s, sw, w, nw)
+    return attacks 
+
+```
