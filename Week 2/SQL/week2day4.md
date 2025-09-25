@@ -7,6 +7,7 @@ Constraint - A rule in schema that defines some limitation about the data. For i
  - UNIQUE - Every value in the column must be unique.
  - NOT NULL - The column cannot hold `null` values.
  - DEFAULT - Sets a default value, if a `null` value would be inserted, replace it with the default instead. Works well with NOT NULL, but doesn't work with UNIQUE
+ - Data type - we can only insert the proper type of data in a column
 
 ### Nested Queries
 
@@ -20,6 +21,19 @@ Distinct - SQL keyword used in a query to only select one of each value from a c
 
 
 ### Alter Table
+We can alter anything about the table schema just like when creating the table, but this becomes difficult if the table has data already within, as that data cannot be in violation of new constraints. In that case the alter table command will fail.
+ - add or remove columns
+ - change the names of columns
+ - change the constraints and data types
+ - add or remove foreign keys (which are just more constraints)
+
+### ACID - Transaction Properties
+ - Atomicity - The transaction is applied atomically, cannot be inturrupted, either occurs fully or not at all.
+ - Consistency - All database changes must go from a consistent (obeying the rules and constraints) state to a consistent state. No inturruptions or mistakes can take your database to an inconsistent state.
+ - Isolation - Two transactions in parallel (happening at the exact same time) should not interfere with eachother.
+ - Durability - Any completed transactions are permenant, and incomplete transactions don't modify the state at all until fully committed, where they become permenant.
+
+
 
 ### Group By 
 
@@ -30,15 +44,14 @@ Distinct - SQL keyword used in a query to only select one of each value from a c
 ### Functions
 Function - Take some input, perform some operation, and produce some output
 
-Scalar Functions - one input value, one output value.
+#### Scalar Functions - one input value, one output value.
  - LCASE()
  - UCASE()
  - MID()
  - LEN()
  - ROUND()
 
-
-Aggregate Functions - many input values, exactly one output value
+#### Aggregate Functions - many input values, exactly one output value
  - SUM()
  - AVG()
  - MEDIAN()
@@ -46,6 +59,6 @@ Aggregate Functions - many input values, exactly one output value
  - MIN()
  - MAX()
 
-What about NOW()? GeeksforGeeks says this is a scalar function. I suppose we can think of aggregate functions as taking in ONE OR MORE inputs, and producing exactly one output. With NOW() taking in no inputs, we're left with scalar. It's really not important, Kyle just thought this was interesting.
+What about NOW()? GeeksforGeeks says this is a scalar function. I suppose we can think of aggregate functions as taking in ONE OR MORE inputs, and producing exactly one output. With NOW() taking in no inputs, we're left with scalar. It's really not important, Kyle just thought this was interesting. He would probably say there's no right answer.
 
 
