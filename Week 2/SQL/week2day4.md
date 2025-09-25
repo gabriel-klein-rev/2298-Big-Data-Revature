@@ -73,28 +73,35 @@ We can alter anything about the table schema just like when creating the table, 
 
 
 ### Group By 
+GROUP BY groups rows that have the same values in specified columns into summary rows. It's used with aggregate functions to perform calculations on each group separately.
+ - Creates one result row per unique combination of grouped columns
+ - Any column in SELECT must either be in GROUP BY or be an aggregate function
+ - Aggregate functions operate on each group individually
+ - GROUP BY comes after WHERE but before ORDER BY
 
 ### Having
-
-
+HAVING filters groups created by GROUP BY, similar to how WHERE filters individual rows. The key difference is HAVING works on grouped data and can use aggregate functions in its conditions. Where filters before the results are aggregated, and Having filters based on aggregate function output.
+ - Used only with GROUP BY
+ - Filters results based on the output of aggregate functions
+ - Executes after GROUP BY but before ORDER BY
 
 ### Functions
 Function - Take some input, perform some operation, and produce some output
 
 #### Scalar Functions - one input value, one output value.
- - LCASE()
- - UCASE()
- - MID()
- - LEN()
- - ROUND()
+ - LCASE() - Converts a string to lowercase letters
+ - UCASE() - Converts a string to uppercase letters
+ - MID() - Extracts a substring from a string starting at a specified position
+ - LEN() - Returns the number of characters in a string
+ - ROUND() - Rounds a number to a specified number of decimal places
 
 #### Aggregate Functions - many input values, exactly one output value
- - SUM()
- - AVG()
- - MEDIAN()
- - COUNT()
- - MIN()
- - MAX()
+ - SUM() - Calculates the total of all values in a column
+ - AVG() - Calculates the average (mean) of all values in a column
+ - MEDIAN() - Returns the middle value when all values are sorted in order
+ - COUNT() - Returns the number of rows or non-null values in a column
+ - MIN() - Returns the smallest value in a column
+ - MAX() - Returns the largest value in a column
 
 What about NOW()? GeeksforGeeks says this is a scalar function. I suppose we can think of aggregate functions as taking in ONE OR MORE inputs, and producing exactly one output. With NOW() taking in no inputs, we're left with scalar. It's really not important, Kyle just thought this was interesting. He would probably say there's no right answer.
 
