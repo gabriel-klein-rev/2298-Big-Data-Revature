@@ -54,7 +54,7 @@ Distinct - SQL keyword used in a query to only select one of each value from a c
 ### Delete, Drop, & Truncate
  - Delete - DML - Remove data from a table one row at a time with the potential to filter using WHERE clause.
  - Drop - DDL - Drops the whole table, which necessarioly ejects all data in that table.
- - Truncate - DDL(?!) - This apparently counts as DDL because of the way it ejects data.
+ - Truncate - DDL(?!) - This apparently counts as DDL because of the way it ejects data. Removes all data from the table by de-allocating "data pages" (the actual blocks of data). Another reason TRUNCATE is DDL is that it impacts table schema, like resetting auto incrementing sequences. The result is that the data in a table is changed (deleted) but the way this is done is by modifying the underlying structure of the database.
 
 
 ### Alter Table
