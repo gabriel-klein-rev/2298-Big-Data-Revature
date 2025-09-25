@@ -107,6 +107,15 @@ What about NOW()? GeeksforGeeks says this is a scalar function. I suppose we can
 
 
 ## Code Challenges
+### [Weather Station 2](https://www.hackerrank.com/challenges/weather-observation-station-2/problem)
+```SQL
+/*Enter your query here.*/
+SELECT 
+    ROUND(SUM(LAT_N), 2),
+    ROUND(SUM(LONG_W), 2)
+FROM STATION
+```
+
 ### [The Report](https://www.hackerrank.com/challenges/the-report/problem)
 ```SQL
 /*Enter your query here.*/
