@@ -1,5 +1,5 @@
 # Week 2 Day 4 Notes
-
+## Notes
 ### Constraints
 Constraint - A rule in schema that defines some limitation about the data. For instance: UNIQUE which tells the database engine that no data can be inserted or modified in this column if it would break the UNIQUE rule, that there can only be one of each value in that column.
  - PRIMARY KEY - Sets the primary index on the table and gurantees that every row can be uniquely identified. Implies INDEXED, UNIQUE, & NOT NULL
@@ -106,3 +106,18 @@ Function - Take some input, perform some operation, and produce some output
 What about NOW()? GeeksforGeeks says this is a scalar function. I suppose we can think of aggregate functions as taking in ONE OR MORE inputs, and producing exactly one output. With NOW() taking in no inputs, we're left with scalar. It's really not important, Kyle just thought this was interesting. He would probably say there's no right answer.
 
 
+## Code Challenges
+### [The Report](https://www.hackerrank.com/challenges/the-report/problem)
+```SQL
+/*Enter your query here.*/
+SELECT 
+    CASE WHEN G.Grade < 8 THEN 'NULL' ELSE S.Name END, 
+    G.Grade, 
+    S.Marks
+FROM Students S
+INNER JOIN Grades G ON S.Marks <= G.Max_Mark AND S.Marks >= G.Min_Mark
+ORDER BY G.Grade DESC, 
+    CASE WHEN G.Grade >=8 THEN S.Name END,
+    CASE WHEN G.Grade < 8 THEN S.Marks END;
+
+```
