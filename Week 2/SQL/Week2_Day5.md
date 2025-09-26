@@ -143,6 +143,7 @@ If we think of `JOIN` as combining columns horizontally, we can conceptualize se
  - `UNION` - Combine both sets
  - `INTERSECT` - Combine both sets and include only those rows which are found in both sets
  - `EXCEPT` - Subtract the second set from the first set and return what remains
+  
 `INTERSECT` and `EXCEPT` are now supported by MySQL even if MySQL Workbench doesn't yet realize. You can ignore intellisense warnings about those two, the query will run.
 
 #### UNION
