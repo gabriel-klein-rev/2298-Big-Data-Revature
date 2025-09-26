@@ -138,6 +138,33 @@ FROM students;
 SELECT * FROM student_contacts;
 ```
 
+## Set Operations
+If we think of `JOIN` as combining columns horizontally, we can conceptualize set operations like `UNION` to be combining rows verttically. These operations are all a matter of combining two results sets into a single result set in some fashion. 
+ - `UNION` - Combine both sets
+ - `INTERSECT` - Combine both sets and include only those rows which are found in both sets
+ - `EXCEPT` - Subtract the second set from the first set and return what remains
+`INTERSECT` and `EXCEPT` are now supported by MySQL even if MySQL Workbench doesn't yet realize. You can ignore intellisense warnings about those two, the query will run.
+
+#### UNION
+```SQL
+-- Get all customer names from two different tables
+SELECT customer_name FROM customers_north
+UNION
+SELECT customer_name FROM customers_south;
+```
+#### INTERSECT
+```SQL
+SELECT student_id, student_name FROM students_math
+INTERSECT
+SELECT student_id, student_name FROM students_science;
+```
+#### EXCEPT
+```SQL
+SELECT student_id, student_name FROM students_math
+EXCEPT
+SELECT student_id, student_name FROM students_science;
+```
+
 ## Normalization
 Normalization is "opinionation", it's a set of best practices that allow us to best leverage optimizations put in place by the authors of the database engine.  
 
