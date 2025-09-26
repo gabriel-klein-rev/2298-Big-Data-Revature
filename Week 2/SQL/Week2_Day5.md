@@ -170,11 +170,18 @@ SELECT student_id, student_name FROM students_science;
 Normalization is "opinionation", it's a set of best practices that allow us to best leverage optimizations put in place by the authors of the database engine.  
 
 #### Dependant
- - honorific: Miss (This is dependant on marital_status. If this person were married it would be 'Mrs')
- - first_name: Danielle  
- - last_name: Plummer  
- - full_name: Miss Danielle Plummer (This is dependant on first_name, last_name, as well as honorific, and because honorific is dependant on marital_status, this is also transitively dependant on marital_status.)
- - marital_status: unmarried  
+
+| Field | Value |
+| -------- | ------- |
+| honorific | Miss |
+| first_name | Danielle |
+| last_name | Plummer |
+| full_name | Miss Danielle Plummer |
+| marital_status | unmarried |
+
+**Dependencies:**
+- honorific is dependent on marital_status (if this person were married it would be 'Mrs')
+- full_name is dependent on first_name, last_name, and honorific, and because honorific is dependent on marital_status, this is also transitively dependent on marital_status
 
 full_name is dependant on honorific, honorific is dependant on marital_status, which means that full_name is transitively dependant on marital_status  
 A -> B, B -> C, and so A -> C (transitively)  
