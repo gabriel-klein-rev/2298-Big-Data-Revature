@@ -1,0 +1,17 @@
+ - What is MongoDB and what are some features of it?
+ - How is MongoDB different from SQL? Give some points.
+ - What are the main types of NoSQL databases?
+ - What is the purpose of the ObjectId in MongoDB?
+ - Explain the concept of data modeling in MongoDB.
+ - What is a replica set in MongoDB?
+ - What is sharding in MongoDB and how does it work?
+ - What is the difference between embedding and referencing documents in MongoDB?
+ - What are the CRUD operations in MongoDB?
+ - What is an index in MongoDB, and how do you create one?
+ - What types of indexes are available in MongoDB?
+ - How can you optimize query performance in MongoDB?
+ - What is the purpose of the MongoDB Aggregation Framework?/ What is aggregation in MongoDB?
+ - What are some common stages in an aggregation pipeline?
+ - What is the use of $lookup operator/stage in MongoDB?
+ - What do you understand by projection?
+ - How do you connect MongoDB with Python?
