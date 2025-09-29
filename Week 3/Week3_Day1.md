@@ -41,7 +41,7 @@ A collection is a group of MongoDB documents—similar to a table in SQL databas
  - No enforced schema: documents in the same collection can have completely different fields
  - Created implicitly when you insert the first document
 
-MongoDB Documents
+### MongoDB Documents
 A document is a single record in MongoDB, stored in BSON format (like JSON with additional data types). Key characteristics:
 
  - Composed of field-value pairs: { "name": "Alice", "age": 25 }
