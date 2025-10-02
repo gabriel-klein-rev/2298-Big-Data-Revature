@@ -22,3 +22,8 @@ Welcome to the repository for training 2298 - Big Data. Here you will find notes
 
 - We will be using MySQL as our SQL dialect of choice. We will be using the free Community Edition. Download here:
     - https://dev.mysql.com/downloads/installer/
+
+### WSL
+
+- For Windows users:
+    - https://learn.microsoft.com/en-us/windows/wsl/install
