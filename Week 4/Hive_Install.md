@@ -7,7 +7,7 @@ Find download link from https://hive.apache.org/general/downloads/ (In this case
 ```
 cd ~
 
-wget https://dlcdn.apache.org/hive/hive-3.1.3/apache-hive-3.1.3-bin.tar.gz
+wget https://archive.apache.org/dist/hive/hive-3.1.3/apache-hive-3.1.3-bin.tar.gz
 
 tar xzf apache-hive-3.1.3-bin.tar.gz
 ```
